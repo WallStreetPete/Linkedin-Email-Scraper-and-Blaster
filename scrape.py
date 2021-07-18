@@ -8,6 +8,9 @@ import string
 from string import digits
 import csv
 
+email_address = input("Enter Email: ")
+email_password = input("Enter Password: ")
+
 base_url = "https://salesql.com/dashboard/contacts?current_tab=257489&page=1&pageSize=10"
 PATH = "C:\Program Files (x86)\chromedriver.exe"
 driver = webdriver.Chrome(PATH)
@@ -15,12 +18,11 @@ driver.get(base_url)
 
 # More Automation
 input_email = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div/div[2]/form/div[1]/div/div/input")
-input_email.send_keys("media@aveslair.com")
+input_email.send_keys(email_address)
 time.sleep(2)
 
 input_pass = driver.find_element_by_xpath("/html/body/div[1]/div[2]/div/div/div[1]/div[2]/div/div[2]/form/div[2]/div/div/input")
-input_pass.send_keys("@v33!a12!8")
-
+input_pass.send_keys(email_password)
 time.sleep(60)
 
 page_source = driver.page_source
