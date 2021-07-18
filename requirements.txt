@@ -1,0 +1,10 @@
+smtplib
+getpass
+csv
+selenium
+selenium.webdriver.common.keys
+time
+requests
+bs4
+string
+digits
